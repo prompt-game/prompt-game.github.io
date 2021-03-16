@@ -1,6 +1,37 @@
 <head>
-<title>Prompt</title>
-<h1 class=title>Prompt</h1>
+<center><title>Prompt</title></center>
+<div id="upper-padding"></div>
+<p id="title">Prompt</p>
+<p id="description">A multiplayer game by Carter Weiss.<br>Private development build v0.0.1<br>The current release is not publicly accessible.  Please contact the administrator for details/access.</p>
+<div id="game-init">
+<label>Join a game:  (please enter game code)</label><input type="text" id="game-code"></input><button id="button-go" type="button" onclick="redirect();">GO</button>
+<script>
+function redirect() {
+	document.location.href="https://prompt-game.github.io/" + document.getElementById("game-code").value;
+}
+document.getElementById("game-code").addEventListener("keyup",function(event) {
+if (event.keyCode===13){redirect();}
+});
+</script>
+<p game-text>Automatic game creation is currently unavailable.</p>
+</div>
+<style>
+#upper-padding {
+  margin-top: 30px;
+}
+#title {
+  margin-bottom: -20px;
+  font-weight: bold;
+  font-family: "Courier New";
+  text-align: center;
+  font-size: 500%;
+  color: rgb(100,100,100);
+}
+#description {
+  text-align: center;
+  font-family: "Times New Roman";
+}
+</style>
 </head>
 
 <body>
